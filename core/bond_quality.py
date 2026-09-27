@@ -20,7 +20,7 @@ Sources :
     (table "large non-financial service firms" -- a ne PAS utiliser telle
     quelle pour les banques/assureurs, qui suivent une table differente)
 
-Relation prix action / rendement obligataire (rappel de la note de Thomas) :
+Relation prix action / rendement obligataire :
   Le rendement obligataire = taux sans risque + spread de defaut. Quand la
   qualite percue du credit se degrade (spread qui monte), le rendement de
   l'obligation monte -- et empiriquement, ca coincide souvent avec une baisse
@@ -32,7 +32,7 @@ PATCH (institutions financieres + filiales de financement captif) :
   Le ratio de couverture d'interets n'a pas de sens pour les banques/assureurs
   (leur activite EST de preter/emprunter -- ce n'est pas un signe de risque)
   ni pour les industriels avec grosse filiale de financement (ex. Ford/Ford
-  Credit, cf. cas teste avec Thomas). Plutot que d'exclure ces entreprises
+  Credit). Plutot que d'exclure ces entreprises
   (choix de O'Shaughnessy), on bascule sur un ratio de LEVIER (Fonds propres
   / Total actifs), methode standard pour juger la solidite d'un bilan
   bancaire. RECALIBRE (juillet 2026) sur les seuils reglementaires OFFICIELS
