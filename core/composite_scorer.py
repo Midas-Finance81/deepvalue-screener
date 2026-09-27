@@ -20,7 +20,7 @@ Pipeline complet :
      egalement entre les positions de chaque quartile -- meilleures notes
      (quartile 1) = position la plus lourde.
 
-FILTRES ET BONUS AJOUTES (demande explicite de Thomas) :
+FILTRES ET BONUS AJOUTES :
   - Prix plancher 5$/action : applique EN PREMIER (avant tout appel API
     Claude payant) pour ne pas gaspiller de budget sur des titres exclus.
   - Bonus "achat en creux" : si le prix moyen d'achat du cluster (Pilier 1)
@@ -419,7 +419,7 @@ FINRA_BOND_SEARCH_URL = "https://www.finra.org/finra-data/fixed-income/bond"
 
 def print_finra_checklist(portfolio: list[ScoredCandidate]) -> None:
     """Affiche une checklist pour la verification MANUELLE de negociabilite
-    de la dette (decision prise avec Thomas : pas d'automatisation, l'API
+    de la dette (pas d'automatisation, l'API
     TRACE complete necessite un accord d'utilisateur FINRA). La recherche
     de base sur finra.org/finra-data/fixed-income/bond est accessible sans
     compte -- copier le nom de l'emetteur dans la recherche pour chaque
