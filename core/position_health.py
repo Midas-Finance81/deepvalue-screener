@@ -4,9 +4,8 @@ Sante des positions en baisse -- etape 3 du cycle de planification mensuelle
 
 Pour chaque position ouverte dont le gain est negatif, croise DEUX signaux
 independants avant toute decision -- jamais un stop-loss aveugle sur le
-seul prix (decision validee avec Thomas, incompatible avec la logique
-deep value : une these peut legitimement traverser une baisse avant que
-le catalyseur ne joue) :
+seul prix (incompatible avec la logique deep value : une these peut 
+legitimement traverser une baisse avant que le catalyseur ne joue) :
 
   1. Pilier 1 reactualise : y a-t-il eu un NOUVEAU cluster d'achats
      d'inities sur ce titre depuis peu (INSIDER_ACTIVITY_LOOKBACK_DAYS) ?
@@ -25,7 +24,7 @@ DECISION:
     testee et validee avec GLOO plus tot dans le projet), pas besoin de
     dupliquer la logique de vente ici.
   - Sinon (un seul signal negatif, ou aucun) -> ALERTE SEULE, la position
-    reste ouverte, decision manuelle laissee a Thomas.
+    reste ouverte, decision manuelle.
 
 COUT : reutilise portfolio_review.py (1 appel API Claude par position en
 baisse pour le Pilier 3 qualitatif) et insider_clusters.py (scan Form 4 sur
