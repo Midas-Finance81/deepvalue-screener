@@ -2,7 +2,7 @@
 Orchestrateur -- cycle de rebalancement bi-mensuel
 ========================================================
 
-Enchaine les 5 etapes validees avec Thomas, dans l'ordre :
+Enchaine les 5 etapes validees dans l'ordre :
   1. portfolio_review.py    -- etat des positions actuellement detenues
   2. execute_trim()          -- trim des positions >= seuil de gain (+100%)
   3. position_health.py      -- positions en baisse : Pilier 1 + Piliers 2/3
