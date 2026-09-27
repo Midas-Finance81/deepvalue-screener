@@ -10,8 +10,7 @@ Deux endpoints utilises :
   2. Le fichier de soumission complet du Form 4 (texte brut contenant le XML
      du document de "ownership") pointe par la colonne "File Name" de l'index.
 
-Regle de detection d'un cluster (definie par Thomas, affinee suite a la
-methode de reference partagee) :
+Regle de detection d'un cluster :
   - AU MOINS 3 initiés distincts, PAS de plafond (un cluster de 10+ est un
     signal fort a ne pas exclure, pas un cas limite)
   - Achats en marche ouvert (transaction code == "P")
@@ -63,7 +62,6 @@ import pandas as pd
 
 SEC_HEADERS = {
     # La SEC exige un User-Agent identifiable (nom + email) sous peine de 403.
-    "User-Agent": "Thomas <ton_email@example.com> deep-value-screener/0.1",
 }
 
 DAILY_INDEX_URL = "https://www.sec.gov/Archives/edgar/daily-index/{year}/QTR{quarter}/form.{yyyymmdd}.idx"
@@ -443,8 +441,7 @@ def detect_clusters(
     individuel).
 
     max_insiders=None (par defaut) : PAS de plafond -- un cluster de 10+
-    initiés est un signal fort selon la methode de reference (video
-    partagee par Thomas), pas un cas a exclure. Un plafond a 5 excluait a
+    initiés est un signal fort selon la methode de reference, pas un cas a exclure. Un plafond a 5 excluait a
     tort ces clusters exceptionnels."""
     if transactions.empty:
         return pd.DataFrame(
